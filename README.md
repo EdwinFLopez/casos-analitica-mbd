@@ -42,3 +42,11 @@ python -m streamlit run main.py
 # Equivalent a:
 streamlit run main.py
 ```
+
+Una vez ejecutado el comando de inicio, aparece el siguiente mensaje:
+```shell
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.1.129:8501
+```

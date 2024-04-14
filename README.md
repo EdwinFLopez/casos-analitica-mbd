@@ -17,7 +17,8 @@ Con este propósito debemos crear un ambiente virtual.
 Se debe entrar en el folder donde se descargó el repo.
 
 ```shell
-$ cd mbd-datamining-p01
+$ git clone git@github.com:EdwinFLopez/casos-analitica-mbd.git
+$ cd casos-analitica-mbd
 $ python -m venv venv
 $ source venv/bin/activate
 ```

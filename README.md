@@ -34,13 +34,13 @@ $ pip install -r requirements.txt
 ## Ejecutar sitio
 
 El aplicativo es un app web usando [streamlit](https://streamlit.io).
-Para ejecutarlo, se debe usar cualquiera de los siguientes comando:
+Para ejecutarlo, se debe usar cualquiera de los siguientes comandos:
 
 ```shell
-# Running
+# Ejecutar
 python -m streamlit run main.py
 
-# Equivalent a:
+# Es equivalente a:
 streamlit run main.py
 ```
 
@@ -51,3 +51,6 @@ Una vez ejecutado el comando de inicio, aparece el siguiente mensaje:
   Local URL: http://localhost:8501
   Network URL: http://192.168.1.129:8501
 ```
+
+Abrir el navegador web en la url que menciona. Si es máquina local, usar **"Local URL"**, si se
+desea acceder dentro de la intranet, usar **"Network URL"**.

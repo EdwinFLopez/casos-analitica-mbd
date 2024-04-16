@@ -10,7 +10,7 @@ de los recorridos hechos por los distintos servicios de Taxi de la ciudad.
 Para resolver este caso tendréis suficiente con analizar los datos de dos meses 
 cualquiera del año 2023. Tened en cuenta que los _Yellow Cabs_ y los _Green Cabs_ se 
 rigen por normativas distintas en cuanto a recogida de pasajeros, por lo que deberéis 
-combinar los datos de ambas flotas. 
+combinar los datos de ambas flotas. 1º  
 
 Con estos datos se os propone que apliquéis técnicas de estadística, analítica, minería 
 de datos y visualización para responder a las siguientes preguntas. No hay restricciones 

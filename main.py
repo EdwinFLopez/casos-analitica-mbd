@@ -16,8 +16,9 @@ if __name__ == '__main__':
     sl.title("Caso 1: New York City Taxi")
     sl.markdown(rf.read(INTRO_PATH))
 
-    df = pd.read_parquet(os.path.abspath("./data/green_tripdata_2014-01.parquet"))
+    df = pd.read_parquet(os.path.abspath("C:\\Users\\pipes\\OneDrive\\Documentos\\Caso practico\\green_tripdata_2023-11.parquet"))
 
     df
 
     sl.markdown(rf.read("./assets/page1.md"))
+

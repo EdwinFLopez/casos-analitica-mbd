@@ -10,6 +10,7 @@ ASSETS_DIR = "./assets"
 INTRO_PATH = f"{ASSETS_DIR}/intro.md"
 
 # DATA FILES
+REFERER =  "https://www.nyc.gov"
 DATA_FILES_URL = "https://d37ci6vzurychx.cloudfront.net/trip-data"
 DATA_FILE_PATTERN = "{{color}}_tripdata_{{yyyy}}-{{mm}}.parquet"
 TAXI_COLORS = ["yellow", "green"]

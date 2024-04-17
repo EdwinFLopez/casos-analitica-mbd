@@ -1,5 +1,4 @@
 import os.path
-
 import utils
 import utils.unzip_data as uzd
 import utils.download_data as dd
@@ -12,6 +11,10 @@ def load(data_folder: str, reload: bool = False) -> list:
     :param reload: recargar los archivos
     :return: lista de archivos descargados
     """
+    # crear el folder de descarga si no existe
+    if not os.path.exists(data_folder):
+        os.makedirs(data_folder)
+
     data_files = []
     for color in range(len(utils.TAXI_COLORS)):
         for mm in range(len(utils.MONTHS)):
@@ -22,21 +25,19 @@ def load(data_folder: str, reload: bool = False) -> list:
                     .replace("{{mm}}", utils.MONTHS[mm])
                     .replace("{{yyyy}}", utils.YEARS[yyyy])
                 )
-
-    data_files = data_files
-
-    # crear el folder de descarga si no existe
-    if not os.path.exists(data_folder):
-        os.makedirs(data_folder)
-
     # Descargar los archivos
     downloaded = []
     for data_file in data_files:
         url = f"{utils.DATA_FILES_URL}/{data_file}"
-        data_file_exists = os.path.exists(f"{data_folder}/{data_file}")
-        should_download = (data_file_exists and reload) or not data_file_exists
-        if should_download:
+        data_file_exists = os.path.exists(os.path.join(data_folder, data_file))
+        if (data_file_exists and reload) or not data_file_exists:
             downloaded.append(url)
+
+    for asset_url in utils.TAXI_ZONE_ASSETS + utils.TAXI_PDF_ASSETS:
+        asset_file = asset_url.split("/")[-1]
+        asset_file_exists = os.path.exists(os.path.join(data_folder, asset_file))
+        if (asset_file_exists and reload) or not data_file_exists:
+            downloaded.append(asset_url)
 
     failed = []
     for downloaded_file in downloaded:
@@ -52,5 +53,6 @@ def load(data_folder: str, reload: bool = False) -> list:
 
 
 if __name__ == "__main__":
-    downloaded = load(os.path.abspath("../data"))
-    print(len(downloaded))
+    data_folder = os.path.abspath("../data")
+    downloaded = load(data_folder, False)
+    print(f"Descargados en {data_folder}: {len(downloaded)} archivo(s)")

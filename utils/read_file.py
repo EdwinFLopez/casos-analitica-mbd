@@ -1,4 +1,6 @@
 import os
+
+
 def read(file_path: str) -> str:
     """
     Lee el contenido de un archivo completo como texto

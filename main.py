@@ -12,13 +12,6 @@ import pandas as pd
 if __name__ == '__main__':
     # Rutas de contenido
     INTRO_PATH = os.path.abspath(utils.INTRO_PATH)
-
     sl.title("Caso 1: New York City Taxi")
     sl.markdown(rf.read(INTRO_PATH))
-
-    df = pd.read_parquet(os.path.abspath("C:\\Users\\pipes\\OneDrive\\Documentos\\Caso practico\\green_tripdata_2023-11.parquet"))
-
-    df
-
-    sl.markdown(rf.read("./assets/page1.md"))
-
+    sl.markdown(rf.read("pages/page1.md"))

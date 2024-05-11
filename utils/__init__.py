@@ -6,7 +6,7 @@ Paquete de utilidades.
 # =============================================================================
 
 # CONTENIDO
-ASSETS_DIR = "./assets"
+ASSETS_DIR = "./pages"
 INTRO_PATH = f"{ASSETS_DIR}/intro.md"
 
 # DATA FILES

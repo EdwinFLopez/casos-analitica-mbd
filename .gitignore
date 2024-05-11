@@ -160,6 +160,6 @@ cython_debug/
 .idea/
 
 # Data files
-/data/
-.DS_Store
-all-data-files/
+**/data/
+**/.DS_Store
+**/all-data-files/

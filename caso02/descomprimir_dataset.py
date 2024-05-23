@@ -1,5 +1,6 @@
 # Rutas a la zona de datos locales.
 import os
+from pathlib import Path
 
 from utils.unzip_data import unzip_data
 
@@ -15,7 +16,7 @@ def unzip_dataset() -> str:
 
     # Crear el folder "./data/" si no existe
     if not os.path.exists(target_folder):
-        os.makedirs(target_folder)
+        Path(target_folder).mkdir(parents=True, exist_ok=True)
     else:
         print(f"Folder {target_folder} ya existe.")
 

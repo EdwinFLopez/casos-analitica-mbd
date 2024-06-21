@@ -6,6 +6,7 @@
 205590092-the-musician-and-the-monster
 199798953-one-perfect-couple
 127306128-when-we-were-silent
+199797582-the-paradise-problem
 199798460-the-return-of-ellie-black
 195790857-all-s-fair-in-love-and-war
 195790745-disturbing-the-dead
@@ -91,7 +92,6 @@
 195853534-the-five-year-lie
 196726166-the-honey-witch
 196774350-the-last-time-she-saw-him
-199797582-the-paradise-problem
 197577126-this-summer-will-be-different
 199797969-the-main-character
 196848638-blood-on-the-tide

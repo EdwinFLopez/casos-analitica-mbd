@@ -16,3 +16,5 @@ textstat
 transformers
 wordcloud
 emoji
+folium
+plotly

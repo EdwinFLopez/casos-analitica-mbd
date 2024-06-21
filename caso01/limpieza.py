@@ -21,7 +21,7 @@ def limpieza_datos(df):
         except Exception as e:
             print(f"Error al procesar la columna {col}: {e}")
 
-    #Listas de tuplas con las columnas con valores negativos o nulos
+    # Listas de tuplas con las columnas con valores negativos o nulos
     condiciones = [
         ('trip_distance', 0),
         ('fare_amount', 0),
@@ -33,7 +33,7 @@ def limpieza_datos(df):
     for columna, valor_minimo in condiciones:
         df = df[df[columna] > valor_minimo]
 
-    #Listas de tuplas con las columnas con valores negativos o nulos
+    # Listas de tuplas con las columnas con valores negativos o nulos
     condiciones_2 = [
         ('congestion_surcharge', 0),
         ('improvement_surcharge', 0),
@@ -50,10 +50,10 @@ def limpieza_datos(df):
     except Exception as e:
         print(f"Se omiten las columnas: {e}")
 
-    #Se eliminan filas duplicadas
+    # Se eliminan filas duplicadas
     df = df.drop_duplicates()
 
-    #Eliminamos las filas con el mismo tiempo de recogida y entrega
+    # Eliminamos las filas con el mismo tiempo de recogida y entrega
     df = df[df['lpep_pickup_datetime'] != df['lpep_dropoff_datetime']]
 
     return df
@@ -78,7 +78,7 @@ def limpieza_datos_2009(df):
     for columna, valor_minimo in condiciones:
         df = df[df[columna] > valor_minimo]
 
-    df = df.dropna(subset=['start_lon', 'start_lat','end_lon','end_lat'])
+    df = df.dropna(subset=['start_lon', 'start_lat', 'end_lon', 'end_lat'])
     df = df.drop_duplicates()
     df = df[df['trip_pickup_datetime'] != df['trip_dropoff_datetime']]
 

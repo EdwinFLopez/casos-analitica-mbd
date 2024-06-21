@@ -31,26 +31,24 @@ Una vez creado el ambiente virtual, se deben instalar las dependencias:
 $ pip install -r requirements.txt
 ```
 
-## Ejecutar sitio
+## Listado de Proyectos
 
-El aplicativo es un app web usando [streamlit](https://streamlit.io).
-Para ejecutarlo, se debe usar cualquiera de los siguientes comandos:
+Proyectos realizados en el marco del desarrollo del curso "Analítica de Datos"
+del Máster en Big Data 2023-2024
 
-```shell
-# Ejecutar
-python -m streamlit run main.py
+### Caso 01: Notebook "./caso01/caso_analitica_taxis_nyc.ipynb"
 
-# Es equivalente a:
-streamlit run main.py
-```
+Proyecto que realiza un análisis de datos tomados de la página web
+de la ciudad de New York. La temática es relacionada con los taxis de la ciudad
+y sus viajes geo referenciados. Se realiza un modelo de predicción.
 
-Una vez ejecutado el comando de inicio, aparece el siguiente mensaje:
-```shell
-  You can now view your Streamlit app in your browser.
+### Caso 02: Notebook "./caso02/caso_analitica_nlp_twitter.ipynb"
 
-  Local URL: http://localhost:8501
-  Network URL: http://192.168.1.129:8501
-```
+El proyecto es acerca del análisis de sentimientos y procesamiento de lenguaje natural (NLP), 
+utilizando un dataset proveniente de Twitter.
 
-Abrir el navegador web en la url que menciona. Si es máquina local, usar **"Local URL"**, si se
-desea acceder dentro de la intranet, usar **"Network URL"**.
+### Caso 03: Notebooks "./caso03/good_reads_books.ipynb" y ".caso03/good_reads_model.ipynb"
+
+El proyecto analiza los best reads del sitio "GoodReads", utilizando técnicas de webscraping.
+Se realiza un modelo de recomendaciones utilizando una matriz de similitud con base en el 
+análisis de similitud del coseno.
